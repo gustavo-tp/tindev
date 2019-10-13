@@ -1,0 +1,22 @@
+Controller não pode ter mais do que os 5 métodos fundamentais:
+INDEX -> lista o recurso
+SHOW -> retorna único registro desse recurso
+STORE -> armazena
+UPDATE -> atualiza
+DELETE -> remove
+
+mkdir backend
+yarn init -y
+yarn add express -> microframework para lidar com rotas do servidor
+node src/server.js -> roda o servidor
+yarn add nodemon -D -> (-D para usar a dependência apenas em modo de desenvolvimento e não em produção)
+nodemon src/server.js -> escuta mudanças e restarta o servidor
+yarn add mongoose -> ferramenta para trabalhar com bd usando sintaxe do javascript
+yarn add axios -> pacote para fazer requisições em APIs externas
+yarn add cors -> permitir que a aplicação seja acessada por qualquer endereço
+
+programação imperativa -> detalhada
+programação declarativa -> define quais elementos aparecerão considerando estados dinâmicos
+
+yarn create react-app frontend
+
