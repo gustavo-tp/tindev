@@ -1,3 +1,5 @@
+// ----------- Backend --------------
+
 Controller não pode ter mais do que os 5 métodos fundamentais:
 INDEX -> lista o recurso
 SHOW -> retorna único registro desse recurso
@@ -15,8 +17,11 @@ yarn add mongoose -> ferramenta para trabalhar com bd usando sintaxe do javascri
 yarn add axios -> pacote para fazer requisições em APIs externas
 yarn add cors -> permitir que a aplicação seja acessada por qualquer endereço
 
+// ----------- Frontend --------------
+
 programação imperativa -> detalhada
 programação declarativa -> define quais elementos aparecerão considerando estados dinâmicos
 
 yarn create react-app frontend
-
+yarn start
+yarn add react-router-dom
