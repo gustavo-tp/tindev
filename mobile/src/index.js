@@ -6,6 +6,7 @@ YellowBox.ignoreWarnings([
 ]);
 
 import Routes from './routes';
+import './config/StatusBarConfig';
 
 export default function App() {
   return (

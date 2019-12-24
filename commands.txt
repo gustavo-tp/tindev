@@ -39,3 +39,5 @@ yarn add axios
 //adb reverse tcp:3333 tcp:3333
 yarn add @react-native-community/async-storage
 yarn add socket.io-client
+
+https://facebook.github.io/react-native/docs/signed-apk-android -> como assinar android-release
