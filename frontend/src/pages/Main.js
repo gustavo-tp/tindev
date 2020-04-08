@@ -29,7 +29,7 @@ export default function Main({ match }) {
   }, [match.params.id]);
 
   useEffect(() => {
-    const socket = io('https://gustavo-tp.github.io/rocketseat-starter', {
+    const socket = io('https://tindev-backend-gustavo-tp.herokuapp.com', {
       query: { user: match.params.id },
     });
 
