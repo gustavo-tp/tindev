@@ -17,7 +17,7 @@ io.on('connection', (socket) => {
 });
 
 mongoose.connect(
-  `mongodb+srv://${ENV['MONGODB_ATLAS_USERNAME']}:${ENV['MONGODB_ATLAS_PASSWORD']}@cluster0-ztlrw.mongodb.net/omnistack8?retryWrites=true&w=majority`,
+  `mongodb+srv://${process.env.MONGODB_ATLAS_USERNAME}:${process.env.MONGODB_ATLAS_PASSWORD}@cluster0-ztlrw.mongodb.net/omnistack8?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
