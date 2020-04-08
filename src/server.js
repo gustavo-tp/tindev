@@ -10,22 +10,25 @@ const io = require('socket.io')(server);
 
 const connectedUsers = {};
 
-io.on('connection', socket => {
-    const { user } = socket.handshake.query;
-    
-    connectedUsers[user] = socket.id;
+io.on('connection', (socket) => {
+  const { user } = socket.handshake.query;
+
+  connectedUsers[user] = socket.id;
 });
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-ztlrw.mongodb.net/omnistack8?retryWrites=true&w=majority', {
+mongoose.connect(
+  `mongodb+srv://${ENV['MONGODB_ATLAS_USERNAME']}:${ENV['MONGODB_ATLAS_PASSWORD']}@cluster0-ztlrw.mongodb.net/omnistack8?retryWrites=true&w=majority`,
+  {
     useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+    useUnifiedTopology: true,
+  }
+);
 
 app.use((req, res, next) => {
-    req.io = io;
-    req.connectedUsers = connectedUsers;
+  req.io = io;
+  req.connectedUsers = connectedUsers;
 
-    return next();
+  return next();
 });
 
 app.use(cors());
